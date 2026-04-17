@@ -7,7 +7,7 @@ export default function App() {
       {({ user, signOut }) => (
         <div style={{ padding: '2rem', fontFamily: 'Arial' }}>
           <h1>Profiles App</h1>
-          <p>Signed in as: {user?.username}</p>
+          <p>Signed in as: {user?.signInDetails?.loginId || user?.username}</p>
           <p>Built by Sachin Banjade</p>
           <button onClick={signOut}>Sign out</button>
         </div>
